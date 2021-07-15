@@ -41,6 +41,8 @@ public class PegasusReservationSystem extends AbstractFlightReservationSystem {
                         System.out.println("Koltuk numaranız : " + rezervasyonKoltukNumarası);
                         koltuklar[rezervasyonKoltukNumarası - 1] = true;
                     }
+                }else {
+                    System.out.println("Seçtiğiniz Koltuk Numarası Business'a ait değildir.");
                 }
                 break;
             case 2:
