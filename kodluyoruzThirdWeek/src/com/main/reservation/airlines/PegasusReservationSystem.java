@@ -35,7 +35,7 @@ public class PegasusReservationSystem extends AbstractFlightReservationSystem {
                 if (businessDoluMu()) {
                     System.out.println("Business Doludur");
                 } else if (rezervasyonKoltukNumarası <= 5) {
-                    if (koltuklar[rezervasyonKoltukNumarası - 1] == true) {
+                    if (koltuklar[rezervasyonKoltukNumarası - 1]) {
                         System.out.println("Seçtiğiniz Koltuk Doludur");
                     } else {
                         System.out.println("Koltuk numaranız : " + rezervasyonKoltukNumarası);
@@ -49,11 +49,11 @@ public class PegasusReservationSystem extends AbstractFlightReservationSystem {
                 if (ekonomiDoluMu()) {
                     System.out.println("Ekonomi Doludur");
                 } else if (rezervasyonKoltukNumarası > 5) {
-                    if (koltuklar[rezervasyonKoltukNumarası - 1] == false) {
+                    if (!koltuklar[rezervasyonKoltukNumarası - 1]) {
                         System.out.println("Koltuk numaranız : " + rezervasyonKoltukNumarası);
                     } else {
                         for (int i = 5; i < koltuklar.length; i++) {
-                            if (koltuklar[i] == false) {
+                            if (!koltuklar[i]) {
                                 System.out.println("Koltuk numaranız : " + (i + 1));
                                 koltuklar[i] = true;
                                 break;

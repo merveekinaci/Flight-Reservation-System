@@ -35,7 +35,7 @@ public abstract class AbstractFlightReservationSystem {
 
     public boolean ekonomiDoluMu(){
         for(int i =  5; i<koltuklar.length; i++){
-            if(koltuklar[i] == false){
+            if(!koltuklar[i]){
                 return false;
             }
         }
@@ -44,7 +44,7 @@ public abstract class AbstractFlightReservationSystem {
 
     public boolean businessDoluMu(){
         for(int i = 0; i<5; i++){
-           if(koltuklar[i] == false){
+           if(!koltuklar[i]){
                return false;
            }
         }

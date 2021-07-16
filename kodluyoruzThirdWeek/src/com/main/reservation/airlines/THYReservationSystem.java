@@ -35,13 +35,13 @@ public class THYReservationSystem extends AbstractFlightReservationSystem {
                 if (businessDoluMu()) {
                     System.out.println("Business Doludur");
                 } else if (rezervasyonKoltukNumarası <= 5) {
-                    if (koltuklar[rezervasyonKoltukNumarası - 1] == true) {
+                    if (koltuklar[rezervasyonKoltukNumarası - 1]) {
                         System.out.println("Seçtiğiniz Koltuk Doludur");
                     } else {
                         System.out.println("Koltuk numaranız : " + rezervasyonKoltukNumarası);
                         koltuklar[rezervasyonKoltukNumarası - 1] = true;
                     }
-                }else {
+                }else{
                     System.out.println("Seçtiğiniz Koltuk Numarası Business'a ait değildir.");
                 }
                 break;
@@ -49,12 +49,14 @@ public class THYReservationSystem extends AbstractFlightReservationSystem {
                 if (ekonomiDoluMu()) {
                     System.out.println("Ekonomi Doludur");
                 } else if (rezervasyonKoltukNumarası > 5) {
-                    if (koltuklar[rezervasyonKoltukNumarası - 1] == true) {
+                    if (koltuklar[rezervasyonKoltukNumarası - 1]) {
                         System.out.println("Seçtiğiniz Koltuk Doludur");
                     } else {
                         System.out.println("Koltuk numaranız : " + rezervasyonKoltukNumarası);
                         koltuklar[rezervasyonKoltukNumarası - 1] = true;
                     }
+                }else{
+                    System.out.println("Seçtiğiniz Koltuk Numarası Ekonomi'ye ait değildir.");
                 }
                 break;
         }

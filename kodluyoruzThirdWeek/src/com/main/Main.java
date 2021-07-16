@@ -16,12 +16,8 @@ public class Main {
         System.out.println("THY için 1'e Pegasus için 2'ye tıklayınız");
         int airline = scanner.nextInt();
         switch (airline) {
-            case 1:
-                thy.rezervasyonAl();
-                break;
-            case 2:
-                pega.rezervasyonAl();
-                break;
+            case 1 -> thy.rezervasyonAl();
+            case 2 -> pega.rezervasyonAl();
         }
         System.out.println("Tekrar işlem için 1'e basınız");
         int tekrar = scanner.nextInt();
@@ -29,12 +25,8 @@ public class Main {
             System.out.println("THY için 1'e Pegasus için 2'ye tıklayınız");
             airline = scanner.nextInt();
             switch (airline) {
-                case 1:
-                    thy.rezervasyonAl();
-                    break;
-                case 2:
-                    pega.rezervasyonAl();
-                    break;
+                case 1 -> thy.rezervasyonAl();
+                case 2 -> pega.rezervasyonAl();
             }
         }
     }
